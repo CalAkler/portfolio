@@ -1,3 +1,22 @@
-html {
-  background: blue;
-}
+@import "setup";
+// @import "vars";
+// @import "mixins";
+
+// General styles
+@import "generalStyles/general";
+@import "generalStyles/typography";
+@import "generalStyles/mediaQueries";
+
+// Sub-pages
+// @import "pages/about";
+
+
+
+
+/* ====================================
+        HOME PAGE
+================================= */
+
+// HEADER
+
+  // "active" colours on current page
