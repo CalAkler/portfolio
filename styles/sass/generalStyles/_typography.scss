@@ -16,7 +16,7 @@ h1 {
 }
 
 h1 span {
-  font-style: 2rem;
+  font-size: 2.3rem;
   color: darken($greyLight, 10);
 }
 
@@ -29,6 +29,11 @@ h3, h4, h5 {
   font-family: $subTitle;
 }
 
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
 .home {
   font-size: 1.6rem;
 }
@@ -39,4 +44,8 @@ nav li {
 
 i {
   font-size: 1.7rem;
+}
+
+.copyright {
+  font-size: 0.8rem;
 }
