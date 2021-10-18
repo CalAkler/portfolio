@@ -226,6 +226,19 @@ html {
   overflow: hidden;
 }
 
+h1, h2, h3, h4, h5, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  margin: 40px 0;
+}
+
 li {
   list-style: none;
 }
@@ -234,18 +247,145 @@ a {
   text-decoration: none;
   color: inherit;
 }
-a:hover, a:focus {
-  text-decoration: underline;
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  width: 85%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .active {
-  background: #464646;
+  background: #b8c6db;
   color: white;
 }
 
 .darkMode {
   background: black;
   color: white;
+}
+
+/* ====================================
+        HEADER
+================================= */
+header {
+  height: 80vh;
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  margin: 15px 0 30px;
+}
+
+h1 span {
+  display: block;
+  padding-bottom: 15px;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* ====================================
+        NAVIGATION
+================================= */
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+nav ul li {
+  padding: 8px 15px 0;
+}
+nav ul li a {
+  position: relative;
+  padding: 8px;
+}
+
+.home {
+  padding: 8px 0 30px;
+}
+.home a {
+  position: relative;
+  padding: 8px;
+}
+
+.desktopMenu a::before,
+.home a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #b8c6db;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+a:hover::before,
+a:focus::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* ====================================
+        FOOTER
+================================= */
+footer {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer ul li {
+  padding: 15px;
+}
+footer ul li:hover i, footer ul li:focus-within i {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 html {
@@ -260,12 +400,35 @@ header {
   color: #464646;
 }
 
+h1 {
+  font-size: 3.6rem;
+  color: black;
+}
+
+h1 span {
+  font-style: 2rem;
+  color: #96abca;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #7490b9;
+}
+
 h3, h4, h5 {
   font-family: "Raleway", sans-serif;
 }
 
+.home {
+  font-size: 1.6rem;
+}
+
 nav li {
   text-transform: uppercase;
+}
+
+i {
+  font-size: 1.7rem;
 }
 
 /* ====================================
