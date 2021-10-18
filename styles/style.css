@@ -226,10 +226,6 @@ html {
   overflow: hidden;
 }
 
-html {
-  font-size: 125%;
-}
-
 li {
   list-style: none;
 }
@@ -243,7 +239,33 @@ a:hover, a:focus {
 }
 
 .active {
-  color: blue;
+  background: #464646;
+  color: white;
+}
+
+.darkMode {
+  background: black;
+  color: white;
+}
+
+html {
+  font-size: 125%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  color: #464646;
+}
+
+h3, h4, h5 {
+  font-family: "Raleway", sans-serif;
+}
+
+nav li {
+  text-transform: uppercase;
 }
 
 /* ====================================
