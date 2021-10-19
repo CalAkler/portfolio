@@ -1,11 +1,3 @@
-// ripple effect when hover/focus/click on project title box (CSS)
-// central box reveals details for each project -- change class from hidden to visible
-
-
-
-// MOBILE MENU
-
-
 // DARK MODE TOGGLE
 
 // change to radial toggle
@@ -56,28 +48,3 @@ const toggleDark = () => {
 }
 
 init();
-
-
-
-// function setTheme(){
-//   //Save to localStorage
-//   //It's commented out because it doesn't work in Stack Overflow snippet
-//   // localStorage.setItem("dark", darkOn ? "true" : "false");
-//   // if(darkOn){
-//   //   document.body.setAttribute("theme", "dark");
-//   //   togButton.innerHTML = "Turn off dark mode.";
-//   // }
-//   else{
-//     document.body.setAttribute("theme", "light");
-//     togButton.innerHTML = "Turn on dark mode.";
-//   }
-// }
-
-// function toggle(){
-//   darkOn = !darkOn;
-//   setTheme();
-// }
-
-// darkButton.addEventListener("click", toggle);
-
-

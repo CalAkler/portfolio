@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -263,10 +264,6 @@ img {
   color: white;
 }
 
-.hidden {
-  display: none;
-}
-
 .darkMode {
   background: black;
   color: white;
@@ -463,21 +460,22 @@ i {
 .projectContainer {
   border: 4px solid black;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 80px 150px 180px 180px;
+  grid-template-columns: 1fr 1.5fr 1.5fr 1fr;
+  grid-template-rows: 40px 40px 120px 120px 40px;
   gap: 20px;
-  grid-template-areas: "  .     info info     .  " "proj1   info info   proj2" "proj1   info info   proj2" "proj3 proj3   proj4 proj4";
+  grid-template-areas: "  .     info info     .  " "proj1   info info   proj2" "proj1   info info   proj2" "proj3   info info   proj4" "proj3     .    .    proj4";
 }
 
 .projectInfo {
-  border: 2px solid blue;
   background: #b8c6db;
   grid-area: info;
+  position: relative;
 }
 
 .project {
   border: 2px solid black;
   background: #b8c6db;
+  cursor: pointer;
 }
 .project .imgBox {
   width: 100px;
@@ -507,6 +505,102 @@ i {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
+.wdynInfo,
+.madLibsInfo,
+.plantedInfo,
+.rhymeTimeInfo {
+  display: block;
+  -webkit-animation: 0.5s ease 0s normal forwards 1 fadeIn;
+          animation: 0.5s ease 0s normal forwards 1 fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.links a::before {
+  content: "٭ ";
+}
+.links a:hover,
+.links a:focus {
+  text-decoration: underline;
+}
+
+.project:hover::before {
+  -webkit-animation: ripple 1.5s ease;
+          animation: ripple 1.5s ease;
+}
+
+.project::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+@-webkit-keyframes ripple {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    opacity: 0;
+  }
+}
 /* ====================================
         HOME PAGE
 ================================= */

@@ -44,32 +44,32 @@
           <div class="projectInfo">
             <!-- dynamically change content when user selects a project -->
             
-            <div class="wdynInfo hidden">
+            <div id="proj1Display" class="hidden">
               <h4>What Do You No?</h4>
               <p class="tools">React | Firebase | REST API | CSS3</p>
               <p class="description">A word game that has you matching the correct homophone with the displayed definition for points. Features a leaderboard to see how you compare to other players.</p>
-              <p class="links"></p>
+              <img src="./assets/wdyn.png" alt="">
             </div>
 
-            <div class="madLibsInfo hidden">
+            <div id="proj2Display" class="hidden">
               <h4>Mad-Libs</h4>
               <p class="tools">React | Firebase | REST API</p>
               <p class="description">This classic mad-libs app lets you input several words based on prompts, then generates a nonsense story with your words inserted. View previous submissions at the end!</p>
-              <p class="links"></p>
+              <img src="./assets/madLibs.png" alt="">
             </div>
 
-            <div class="plantedInfo hidden">
+            <div id="proj3Display" class="hidden">
               <h4>Planted</h4>
               <p class="tools">HTML5 | SCSS | JavaScript</p>
               <p class="description">Pixel-perfect conversion from a PSD design to a multi-page, responsive website.</p>
-              <p class="links"></p>
+              <img src="./assets/planted.png" alt="">
             </div>
 
-            <div class="rhymeTimeInfo hidden">
+            <div id="proj4Display" class="hidden">
               <h4>RhymeTime</h4>
               <p class="tools">jQuery | REST API | HTML5 | CSS3</p>
               <p class="description">Race against the clock to come up with as many rhymes as possible. More rhymes get you a higher score!</p>
-              <p class="links"></p>
+              <img src="./assets/rhymeTime.png" alt="">
             </div>
           
           
@@ -81,12 +81,20 @@
             <div class="imgBox">
               <img src="./assets/wdyn_ear.png" alt="A cartoon-style ear emoji.">
             </div>
+            <div class="links">
+              <a href="https://quizzical-carson-61389e.netlify.app/" target="_blank" rel="noopener noreferrer">See it live</a>
+              <a href="https://github.com/CalAkler/What-Do-You-No" target="_blank" rel="noopener noreferrer">View the repo</a>
+            </div>
           </div>
 
           <div class="project proj2">
             <h5>Mad-Libs</h5>
             <div class="imgBox">
               <img src="./assets/madLibs_notebook.png" alt="A cartoon-style notebook and pencil.">
+            </div>
+            <div class="links">
+              <a href="https://pedantic-poincare-51ad48.netlify.app/" target="_blank" rel="noopener noreferrer">See it live</a>
+              <a href="https://github.com/CalAkler/Mad-Libs" target="_blank" rel="noopener noreferrer">View the repo</a>
             </div>
           </div>
 
@@ -95,6 +103,10 @@
               <h5>Planted</h5>
               <img src="./assets/planted_leaf.png" alt="An image of a green leaf.">
             </div>
+            <div class="links">
+              <a href="https://thirsty-neumann-a76821.netlify.app/" target="_blank" rel="noopener noreferrer">See it live</a>
+              <a href="https://github.com/CalAkler/Planted" target="_blank" rel="noopener noreferrer">View the repo</a>
+            </div>
           </div>
 
           <div class="project proj4">
@@ -102,10 +114,11 @@
             <div class="imgBox">
               <img src="./assets/rhymeTime_stopwatch.png" alt="An image of a stopwatch.">
             </div>
+            <div class="links">
+              <a href="https://rhyme-time.netlify.app/" target="_blank" rel="noopener noreferrer">See it live</a>
+              <a href="https://github.com/CalAkler/RhymeTime" target="_blank" rel="noopener noreferrer">View the repo</a>
+            </div>
           </div>
-
-
-
 
         </div>
       </section>
@@ -135,7 +148,7 @@
         </a>
       </li>
       <li>
-        <a href="mailto:calvinakler@gmail.com?subject=Hi Cal!" target="_blank">
+        <a href="mailto:calvinakler@gmail.com?subject=Hi Cal!" target="_blank" rel="noopener noreferrer">
           <i class="far fa-envelope"></i>
           <span class="sr-only">Email</span>
         </a>
@@ -147,7 +160,9 @@
 
 
   <script src="https://kit.fontawesome.com/51c2eb8596.js" crossorigin="anonymous"></script>
-  <script src="./script.js"></script>
+  <script src="./scripts/script.js"></script>
+  <script src="./scripts/darkMode.js"></script>
+  <script src="./scripts/projectInfo.js"></script>
 </body>
 
 </html>
