@@ -1,0 +1,51 @@
+/* ====================================
+        PROJECT PAGE
+================================= */
+
+.projectContainer {
+  border: 4px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 80px 150px 180px 180px;
+  gap: 20px;
+  grid-template-areas: 
+    "  .     info info     .  "
+    "proj1   info info   proj2"
+    "proj1   info info   proj2"
+    "proj3 proj3   proj4 proj4";
+}
+
+.projectInfo {
+  border: 2px solid blue;
+  background: $greyLight;
+  grid-area: info;
+}
+
+.project {
+  border: 2px solid black;
+  background: $greyLight;
+
+    .imgBox {
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+    }
+}
+
+.proj1 {
+  grid-area: proj1;
+}
+
+.proj2 {
+  grid-area: proj2;
+}
+
+.proj3 {
+  grid-area: proj3;
+  display: flex;
+}
+
+.proj4 {
+  grid-area: proj4;
+  display: flex;
+}

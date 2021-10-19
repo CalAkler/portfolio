@@ -29,6 +29,10 @@ h3, h4, h5 {
   font-family: $subTitle;
 }
 
+h3 {
+  font-size: 1.8rem;
+}
+
 p {
   font-size: 1.1rem;
   line-height: 1.5;
@@ -48,4 +52,5 @@ i {
 
 .copyright {
   font-size: 0.8rem;
+  color: $greyLight;
 }

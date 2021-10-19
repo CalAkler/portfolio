@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +12,9 @@
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="icon" href="./assets/favicon.ico">
 </head>
+
 <body>
-  
+
   <header>
     <nav>
       <div class="sidebar">
@@ -24,7 +26,7 @@
         <li><a class="active" href="./projects.html"">Projects</a></li>
         <!-- link to downloadable resume -->
         <li><a href="">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href=" #contact">Contact</a></li>
       </ul>
     </nav>
     <h1><span>Hi, </span>I'm Cal Akler</h1>
@@ -36,40 +38,76 @@
     <div class="wrapper">
       <section class="projects">
         <h3>Projects</h3>
-        
+
         <div class="projectContainer">
-          
+
           <div class="projectInfo">
             <!-- dynamically change content when user selects a project -->
-            <h4></h4>
-            <p class="description"></p>
-            <p class="links"></p>
+            
+            <div class="wdynInfo hidden">
+              <h4>What Do You No?</h4>
+              <p class="tools">React | Firebase | REST API | CSS3</p>
+              <p class="description">A word game that has you matching the correct homophone with the displayed definition for points. Features a leaderboard to see how you compare to other players.</p>
+              <p class="links"></p>
+            </div>
+
+            <div class="madLibsInfo hidden">
+              <h4>Mad-Libs</h4>
+              <p class="tools">React | Firebase | REST API</p>
+              <p class="description">This classic mad-libs app lets you input several words based on prompts, then generates a nonsense story with your words inserted. View previous submissions at the end!</p>
+              <p class="links"></p>
+            </div>
+
+            <div class="plantedInfo hidden">
+              <h4>Planted</h4>
+              <p class="tools">HTML5 | SCSS | JavaScript</p>
+              <p class="description">Pixel-perfect conversion from a PSD design to a multi-page, responsive website.</p>
+              <p class="links"></p>
+            </div>
+
+            <div class="rhymeTimeInfo hidden">
+              <h4>RhymeTime</h4>
+              <p class="tools">jQuery | REST API | HTML5 | CSS3</p>
+              <p class="description">Race against the clock to come up with as many rhymes as possible. More rhymes get you a higher score!</p>
+              <p class="links"></p>
+            </div>
+          
+          
+          
           </div>
 
-          <ul>
-            <li>
-              <h5>What Do You No?</h5>
-              <img src="" alt="">
-            </li>
-            <li>
-              <h5>Mad-Libs</h5>
-              <img src="" alt="">
-            </li>
-            <li>
+          <div class="project proj1">
+            <h5>What Do You No?</h5>
+            <div class="imgBox">
+              <img src="./assets/wdyn_ear.png" alt="A cartoon-style ear emoji.">
+            </div>
+          </div>
+
+          <div class="project proj2">
+            <h5>Mad-Libs</h5>
+            <div class="imgBox">
+              <img src="./assets/madLibs_notebook.png" alt="A cartoon-style notebook and pencil.">
+            </div>
+          </div>
+
+          <div class="project proj3">
+            <div class="imgBox">
               <h5>Planted</h5>
-              <img src="" alt="">
-            </li>
-            <li>
-              <h5>War</h5>
-              <img src="" alt="">
-            </li>
-            <li>
-              <h5>RhymeTime</h5>
-              <img src="" alt="">
-            </li>
-          </ul>
+              <img src="./assets/planted_leaf.png" alt="An image of a green leaf.">
+            </div>
+          </div>
+
+          <div class="project proj4">
+            <h5>RhymeTime</h5>
+            <div class="imgBox">
+              <img src="./assets/rhymeTime_stopwatch.png" alt="An image of a stopwatch.">
+            </div>
+          </div>
+
+
+
+
         </div>
-      
       </section>
     </div>
   </main>
@@ -107,8 +145,9 @@
     <p class="copyright">Created by Cal Akler, 2021.</p>
   </footer>
 
-  
+
   <script src="https://kit.fontawesome.com/51c2eb8596.js" crossorigin="anonymous"></script>
   <script src="./script.js"></script>
 </body>
+
 </html>

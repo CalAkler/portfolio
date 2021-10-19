@@ -249,7 +249,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .wrapper {
@@ -261,6 +261,10 @@ img {
 .active {
   background: #b8c6db;
   color: white;
+}
+
+.hidden {
+  display: none;
 }
 
 .darkMode {
@@ -318,7 +322,7 @@ nav ul li a {
 }
 
 .home {
-  padding: 8px 0 30px;
+  padding: 3px 0 30px;
 }
 .home a {
   position: relative;
@@ -373,6 +377,7 @@ footer {
           flex-direction: column;
   background-color: #b8c6db;
   background-image: linear-gradient(315deg, #f5f7fa 0%, #b8c6db 74%);
+  padding-top: 20px;
 }
 footer ul {
   display: -webkit-box;
@@ -388,6 +393,11 @@ footer ul li {
 footer ul li:hover i, footer ul li:focus-within i {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
+}
+
+.copyright {
+  padding: 10px 0 4px;
+  background: #464646;
 }
 
 html {
@@ -421,6 +431,10 @@ h3, h4, h5 {
   font-family: "Raleway", sans-serif;
 }
 
+h3 {
+  font-size: 1.8rem;
+}
+
 p {
   font-size: 1.1rem;
   line-height: 1.5;
@@ -440,6 +454,57 @@ i {
 
 .copyright {
   font-size: 0.8rem;
+  color: #b8c6db;
+}
+
+/* ====================================
+        PROJECT PAGE
+================================= */
+.projectContainer {
+  border: 4px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 80px 150px 180px 180px;
+  gap: 20px;
+  grid-template-areas: "  .     info info     .  " "proj1   info info   proj2" "proj1   info info   proj2" "proj3 proj3   proj4 proj4";
+}
+
+.projectInfo {
+  border: 2px solid blue;
+  background: #b8c6db;
+  grid-area: info;
+}
+
+.project {
+  border: 2px solid black;
+  background: #b8c6db;
+}
+.project .imgBox {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+}
+
+.proj1 {
+  grid-area: proj1;
+}
+
+.proj2 {
+  grid-area: proj2;
+}
+
+.proj3 {
+  grid-area: proj3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.proj4 {
+  grid-area: proj4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /* ====================================
