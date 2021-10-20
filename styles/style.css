@@ -330,6 +330,12 @@ h4 {
   grid-area: info;
   position: relative;
   overflow-y: hidden;
+  border: 10px solid #232323;
+  border-radius: 25px;
+  background-color: #232323;
+  -webkit-box-shadow: 7px 4px 10px grey;
+          box-shadow: 7px 4px 10px grey;
+  border-bottom: 26px solid #232323;
 }
 
 .project {
