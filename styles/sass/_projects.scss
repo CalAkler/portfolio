@@ -4,9 +4,21 @@
 
 // GENERAL SPACING
 
+.projects {
+  margin-top: 40px;
+}
+
+.instruction {
+  padding: 10px 0 30px;
+}
+
 h4 {
   padding-top: 20px;
   text-align: center;
+}
+
+h5 {
+  padding: 5px;
 }
 
 .tools {
@@ -55,14 +67,19 @@ h4 {
   //needed?
     .imgBox {
       width: 100px;
-      height: 60%;
+      height: 60px;
       object-fit: cover;
+      margin: 0 auto;
     }
 }
 
 .proj1 {
   grid-area: proj1;
   border-radius: 0 20% 20% 20%;
+
+    h5 {
+      padding: 5px 2px 5px;
+    }
 }
 
 .proj2 {
@@ -92,46 +109,13 @@ h4 {
   display: block;
   background-color: #b8c6db;
   background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);  animation: 0.5s ease 0s normal forwards 1 fadeIn;
-  // z-index: 10;  
+  
 }
 
 @keyframes fadeIn {
     0% { opacity: 0; }
     66% { opacity: 0; }
     100% { opacity: 1; }
-}
-
-.links { 
-  display: flex;
-  flex-direction: column;
-    
-    a::before {
-
-          content: "٭ ";
-    }
-
-    a:hover,
-    a:focus {
-      text-decoration: underline;
-    }
-}
-
-
-// RIPPLE EFFECT
-.project:hover::before {
-	animation: ripple 1.5s ease;
-}
-
-.project::before {
-	content:"";
-	position: absolute; 
-  top: 0; 
-  left: 0;
-	width: 100%; 
-  height:100%;
-  background-color:rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-	transform: scale(0);
 }
 
 @keyframes ripple {
@@ -143,4 +127,21 @@ h4 {
     transform: scale(3);
     opacity:0;
   }
+}
+
+.links { 
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+
+    a {
+      background: $greyBlue;
+      border: 1px solid black;
+      margin: 0 10% 0;
+
+        &:hover {
+          background-color: $greyDark;
+          color: white;
+        }
+    }
 }
