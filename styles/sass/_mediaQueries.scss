@@ -1,0 +1,18 @@
+// PROJECTS SECTION
+
+@media (max-width: 845px) {
+
+  div.projectContainer {
+    grid-template-columns: calc(33% - 15px) calc(66% - 15px);
+    grid-template-rows: 40px 100px 40px 100px 40px 100px 100px 40px;
+    grid-template-areas:
+      "proj1    . "
+      "proj1  info"
+      "proj2  info"
+      "proj2  info"
+      "proj3  info"
+      "proj3  info"
+      "proj4  info"
+      "proj4    . ";
+  }
+}
