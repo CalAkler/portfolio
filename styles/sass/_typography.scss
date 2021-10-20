@@ -11,7 +11,7 @@ header {
 }
 
 h1 {
-  font-family: 'Nunito', sans-serif;
+  font-family: $title;
   font-size: 3.6rem;
   color: black;
 }
@@ -22,13 +22,13 @@ h1 span {
 }
 
 h2 {
-  font-family: 'Nunito', sans-serif;
+  font-family: $title;
   font-size: 2.5rem;
   color: $greyBlue;
 }
 
 h3, h4, h5 {
-  font-family: $subTitle;
+  font-family: $title;
 }
 
 h3 {
@@ -53,7 +53,7 @@ p {
 }
 
 .home {
-  font-family: 'Nunito', sans-serif;
+  font-family: $title;
   font-size: 1.6rem;
 }
 

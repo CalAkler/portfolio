@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,10 +16,11 @@
 
 <body>
   <header>
-    <nav>
+    <nav class="desktopNav">
       <div class="sidebar">
         <p class="home"><a class="active" href="./index.html">Cal Akler</a></p>
-        <button id="darkButton">Dark Mode</button>
+        <input type="checkbox" id="darkButton">
+        <label for="darkButton" class="darkSwitch">Dark Mode</label>
       </div>
       <ul class="desktopMenu">
         <li><a href="#about">About Me</a></li>
@@ -31,9 +33,9 @@
     <div class="title">
       <h1 data-aos="fade-right" data-aos-delay="100" data-aos-duration="800"><span>Hi, </span>I'm Cal Akler</h1>
       <h2 data-aos="fade-left" data-aos-delay="800" data-aos-duration="800">Web Developer</h2>
-      
+
       <div class="colorBox" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"></div>
-      
+
       <div class="headshotBox" data-aos="flip-up" data-aos-delay="800" data-aos-easing="ease" data-aos-duration="1500">
         <img src="./assets/favicon.ico" alt="A headshot of Cal in a white shirt.">
       </div>
@@ -41,41 +43,53 @@
   </header>
 
   <main>
-    <div class="wrapper">
+    <section class="about" id="about">
+      <div class="wrapper">
 
-    
-      <section class="about" id="about">
-        <h3>Hi!</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam reprehenderit tempora, cum ad tempore, provident alias consequatur saepe quo quos repudiandae dolor quidem accusamus rerum ex ab nemo vitae tenetur, impedit facilis corrupti magni debitis! Iusto aliquid optio quisquam consectetur!</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita est aut perspiciatis provident optio animi velit excepturi doloremque repudiandae error.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur incidunt nam accusamus consectetur natus quo! Molestias laborum error praesentium voluptatibus. Rem officia facilis perferendis vero dolorum sint explicabo! Dignissimos architecto maxime, distinctio molestias totam fugiat repellendus laudantium. Alias iusto cumque libero est expedita sequi maxime, quaerat debitis blanditiis optio rem ullam. Labore velit aliquid molestiae nobis eum unde at mollitia!</p>
-      </section>
+        <h3>Welcome!</h3>
+        <div class="welcomeBox">
+          <div class="welcomeInfo">
+            <p>I'm a Toronto-based front-end web developer. I love to create engaging and dynamic experiences for users
+              with a focus on fully responsive and accessible content. My background is in theatre and stage combat, and
+              I hope to bring aspects of my creative side, as well as effective collaboration skills, into my work as a
+              developer.</p>
+            <p>Have a look at some of my projects, then reach out through email or your preferred social.</p>
+            <p>Thanks for stopping by!</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
 
 
 
-      <section class="projects" id="projects">
+    <section class="projects" id="projects">
+      <div class="wrapper">
+
         <h3>Projects</h3>
         <p class="instruction">Select a project to view it on the screen!</p>
 
         <div class="projectContainer">
 
           <div class="projectInfo">
-            
+
             <div id="proj1Display" class="hidden">
               <h4>What Do You No?</h4>
               <p class="tools">React | Firebase | REST API | CSS3</p>
-              <p class="description">A word game that has you matching the correct homophone with the displayed definition for points. Features a leaderboard to see how you compare to other players.</p>
+              <p class="description">A word game that has you matching correct homophones with the displayed definition
+                for points. Features a leaderboard to see how you compare to other players.</p>
               <div class="imgBox">
-                <img src="./assets/wdyn.png" alt="">
+                <img src="./assets/wdyn.png" alt="An image of the web app 'What Do You No?'">
               </div>
             </div>
 
             <div id="proj2Display" class="hidden">
               <h4>Mad-Libs</h4>
               <p class="tools">React | Firebase | REST API</p>
-              <p class="description">This classic mad-libs app lets you input several words based on prompts, then generates a nonsense story with your words inserted. View previous submissions at the end!</p>
+              <p class="description">This classic mad-libs app lets you input several words based on prompts, then
+                generates a nonsense story with your words inserted. View previous submissions at the end!</p>
               <div class="imgBox">
-                <img src="./assets/madLibs.png" alt="">
+                <img src="./assets/madLibs.png" alt="An image of the web app 'Mad-Libs'">
               </div>
             </div>
 
@@ -84,21 +98,22 @@
               <p class="tools">HTML5 | SCSS | JavaScript</p>
               <p class="description">Pixel-perfect conversion from a PSD design to a multi-page, responsive website.</p>
               <div class="imgBox">
-                <img src="./assets/planted.png" alt="">
+                <img src="./assets/planted.png" alt="An image of the website 'Planted'">
               </div>
             </div>
 
             <div id="proj4Display" class="hidden">
               <h4>RhymeTime</h4>
               <p class="tools">jQuery | REST API | HTML5 | CSS3</p>
-              <p class="description">Race against the clock to come up with as many rhymes as possible. More rhymes get you a higher score!</p>
+              <p class="description">Race against the clock to come up with as many rhymes as possible. More rhymes get
+                you a higher score!</p>
               <div class="imgBox">
-                <img src="./assets/rhymeTime.png" alt="">
+                <img src="./assets/rhymeTime.png" alt="An image of the web app 'RhymeTime'">
               </div>
             </div>
-          
-          
-          
+
+
+
           </div>
 
           <div class="project proj1" data-aos="fade-down-right" data-aos-delay="100">
@@ -107,8 +122,10 @@
               <img src="./assets/wdyn_ear.png" alt="A cartoon-style ear emoji.">
             </div>
             <div class="links">
-              <a href="https://quizzical-carson-61389e.netlify.app/" target="_blank" rel="noopener noreferrer">See it live</a>
-              <a href="https://github.com/CalAkler/What-Do-You-No" target="_blank" rel="noopener noreferrer">View the repo</a>
+              <a href="https://quizzical-carson-61389e.netlify.app/" target="_blank" rel="noopener noreferrer">See it
+                live</a>
+              <a href="https://github.com/CalAkler/What-Do-You-No" target="_blank" rel="noopener noreferrer">View the
+                repo</a>
             </div>
           </div>
 
@@ -118,7 +135,8 @@
               <img src="./assets/madLibs_notebook.png" alt="A cartoon-style notebook and pencil.">
             </div>
             <div class="links">
-              <a href="https://pedantic-poincare-51ad48.netlify.app/" target="_blank" rel="noopener noreferrer">See it live</a>
+              <a href="https://pedantic-poincare-51ad48.netlify.app/" target="_blank" rel="noopener noreferrer">See it
+                live</a>
               <a href="https://github.com/CalAkler/Mad-Libs" target="_blank" rel="noopener noreferrer">View the repo</a>
             </div>
           </div>
@@ -129,7 +147,8 @@
               <img src="./assets/planted_leaf.png" alt="An image of a green leaf.">
             </div>
             <div class="links">
-              <a href="https://thirsty-neumann-a76821.netlify.app/" target="_blank" rel="noopener noreferrer">See it live</a>
+              <a href="https://thirsty-neumann-a76821.netlify.app/" target="_blank" rel="noopener noreferrer">See it
+                live</a>
               <a href="https://github.com/CalAkler/Planted" target="_blank" rel="noopener noreferrer">View the repo</a>
             </div>
           </div>
@@ -141,15 +160,15 @@
             </div>
             <div class="links">
               <a href="https://rhyme-time.netlify.app/" target="_blank" rel="noopener noreferrer">See it live</a>
-              <a href="https://github.com/CalAkler/RhymeTime" target="_blank" rel="noopener noreferrer">View the repo</a>
+              <a href="https://github.com/CalAkler/RhymeTime" target="_blank" rel="noopener noreferrer">View the
+                repo</a>
             </div>
           </div>
 
         </div>
-      </section>
+      </div>
 
-
-    </div>
+    </section>
   </main>
 
 
