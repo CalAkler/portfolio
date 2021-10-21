@@ -336,9 +336,42 @@ i {
   }
 
   div.projectContainer {
-    grid-template-columns: calc(33% - 15px) calc(66% - 15px);
+    grid-template-columns: calc(45% - 15px) calc(55% - 15px);
     grid-template-rows: 40px 100px 40px 100px 30px 40px 100px 100px 40px;
     grid-template-areas: "proj1  info1" "proj1  info1" "proj2  info1" "proj2  info1" "  .      .  " "proj3  info2" "proj3  info2" "proj4  info2" "proj4  info2 ";
+  }
+}
+@media (max-width: 760px) {
+  p.description {
+    font-size: 0.9rem;
+  }
+
+  div.projectContainer {
+    grid-template-columns: calc(45% - 15px) calc(55% - 15px);
+    grid-template-rows: 50px 120px 50px 120px 30px 50px 120px 120px 50px;
+  }
+}
+@media (max-width: 615px) {
+  div.wrapper {
+    width: 95%;
+  }
+
+  .projectInfo h4 {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 410px) {
+  div.links a {
+    font-size: 0.8rem;
+    margin: 0 8% 0;
+  }
+
+  p.tools {
+    font-size: 0.7rem;
   }
 }
 /* ====================================
