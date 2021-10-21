@@ -28,55 +28,27 @@
         right: 55px;
       }
   }
-
-  // input[type=checkbox]:checked + label.darkSwitch::after {
-  //   right: 2px;
-  // }
 }
 
 
 @media (max-width: 845px) {
 
+  div.screen2 {
+    display: block;
+  }
+
   div.projectContainer {
     grid-template-columns: calc(33% - 15px) calc(66% - 15px);
-    grid-template-rows: 40px 100px 40px 100px 40px 100px 100px 40px;
+    grid-template-rows: 40px 100px 40px 100px 30px 40px 100px 100px 40px;
     grid-template-areas:
-      "proj1    . "
-      "proj1  info"
-      "proj2  info"
-      "proj2  info"
-      "proj3  info"
-      "proj3  info"
-      "proj4  info"
-      "proj4    . ";
+      "proj1  info1"
+      "proj1  info1"
+      "proj2  info1"
+      "proj2  info1"
+      "  .      .  "
+      "proj3  info2"
+      "proj3  info2"
+      "proj4  info2"
+      "proj4  info2 ";
   }
 }
-
-// @media (max-width: 500px) {
-
-//   .darkInput {
-//     margin-left: -60px;
-//   }
-
-//   label.darkSwitch {
-//     padding-right: 4.5rem;
-//   }
-
-//   label.darkSwitch::before {
-//     height: 1.75rem;
-//     width: 4rem;
-//     top: 12px;
-
-//   }
-
-//   label.darkSwitch::after {
-//     top: 15px;
-//     right: 46px;
-//   }
-// }
-
-// @media (max-width: 430px) {
-//   div.darkInput {
-//     display: none;
-//   }
-// }

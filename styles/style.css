@@ -331,23 +331,19 @@ i {
   }
 }
 @media (max-width: 845px) {
+  div.screen2 {
+    display: block;
+  }
+
   div.projectContainer {
     grid-template-columns: calc(33% - 15px) calc(66% - 15px);
-    grid-template-rows: 40px 100px 40px 100px 40px 100px 100px 40px;
-    grid-template-areas: "proj1    . " "proj1  info" "proj2  info" "proj2  info" "proj3  info" "proj3  info" "proj4  info" "proj4    . ";
+    grid-template-rows: 40px 100px 40px 100px 30px 40px 100px 100px 40px;
+    grid-template-areas: "proj1  info1" "proj1  info1" "proj2  info1" "proj2  info1" "  .      .  " "proj3  info2" "proj3  info2" "proj4  info2" "proj4  info2 ";
   }
 }
 /* ====================================
         ABOUT SECTION
 ================================= */
-.about .wrapper {
-  width: 100%;
-}
-
-.about h3 {
-  margin-left: 8%;
-}
-
 .about p {
   padding-bottom: 10px;
   line-height: 1.2;
@@ -361,7 +357,6 @@ i {
 
 .welcomeInfo {
   width: 85%;
-  margin: 0 15% 0 8%;
 }
 
 /* ====================================
@@ -398,11 +393,10 @@ h5 {
   grid-template-columns: calc(25% - 20px) calc(50% - 20px) calc(25% - 20px);
   grid-template-rows: 40px 40px 120px 120px 40px;
   gap: 30px;
-  grid-template-areas: "  .     info      .  " "proj1   info    proj2" "proj1   info    proj2" "proj3   info    proj4" "proj3     .     proj4";
+  grid-template-areas: "  .     info1     .  " "proj1   info1   proj2" "proj1   info1   proj2" "proj3   info1   proj4" "proj3     .     proj4";
 }
 
 .projectInfo {
-  grid-area: info;
   position: relative;
   overflow-y: hidden;
   border: 10px solid #232323;
@@ -411,6 +405,15 @@ h5 {
   background-color: #232323;
   -webkit-box-shadow: 7px 4px 10px grey;
           box-shadow: 7px 4px 10px grey;
+}
+
+.screen1 {
+  grid-area: info1;
+}
+
+.screen2 {
+  grid-area: info2;
+  display: none;
 }
 
 .project {
@@ -772,6 +775,7 @@ a:focus::before {
   position: absolute;
   top: -100px;
   right: 0;
+  z-index: 10;
 }
 
 .fa-bars,

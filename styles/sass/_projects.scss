@@ -38,16 +38,15 @@ h5 {
   grid-template-rows: 40px 40px 120px 120px 40px;
   gap: 30px;
   grid-template-areas: 
-    "  .     info      .  "
-    "proj1   info    proj2"
-    "proj1   info    proj2"
-    "proj3   info    proj4"
+    "  .     info1     .  "
+    "proj1   info1   proj2"
+    "proj1   info1   proj2"
+    "proj3   info1   proj4"
     "proj3     .     proj4";
 }
 
 // screen
 .projectInfo {
-  grid-area: info;
   position: relative;
   overflow-y: hidden;
   border: 10px solid #232323;
@@ -55,6 +54,15 @@ h5 {
   border-radius: 25px;
   background-color: #232323;
   box-shadow: 7px 4px 10px grey;
+}
+
+.screen1 {
+  grid-area: info1;
+}
+
+.screen2 {
+  grid-area: info2;
+  display: none;
 }
 
 .project {
