@@ -16,19 +16,43 @@
 
 <body>
   <header>
-    <nav class="desktopNav">
-      <div class="sidebar">
-        <p class="home"><a class="active" href="./index.html">Cal Akler</a></p>
+    <div class="topBar">
+      <p class="home"><a href="./index.html">Cal Akler</a></p>
+
+      <div class="darkInput">
         <input type="checkbox" id="darkButton">
         <label for="darkButton" class="darkSwitch">Dark Mode</label>
       </div>
-      <ul class="desktopMenu">
+      <nav>
+        <ul class="desktopMenu">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="./assets/resumeCalAkler.pdf">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--  hamburger -->
+
+    <button class="hamburger mobileOnly">
+      <div>
+        <i class="fas fa-bars"></i>
+      </div>
+        <i class="fas fa-times"></i>
+    </button>
+
+    <nav class="mobileMenu mobileOnly">
+      <ul>
         <li><a href="#about">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="./assets/resumeCalAkler.pdf">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
+
+
 
     <div class="title">
       <h1 data-aos="fade-right" data-aos-delay="100" data-aos-duration="800"><span>Hi, </span>I'm Cal Akler</h1>

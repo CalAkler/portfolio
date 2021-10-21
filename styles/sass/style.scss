@@ -1,6 +1,5 @@
 @import "setup";
 @import "vars";
-// @import "mixins";
 
 // General styles
 @import "typography";
@@ -40,7 +39,8 @@ h3::before {
   height: 2.2rem;
   width: 100%;
   background-color: cornflowerblue;
-  background-image: linear-gradient(315deg, cornflowerblue 0%, #a4bfef 65%, white 100%);
+  // transition into background not blending?
+  background-image: linear-gradient(315deg, cornflowerblue 0%, #a4bfef 55%, #f5f7fa 96%);
   z-index: -10;
   position: absolute;
   bottom: 20px;
@@ -67,7 +67,7 @@ img {
   margin: 0 auto;
 }
 
-.active {
+.home a {
   background: cornflowerblue;
   color: white;
 }
@@ -80,8 +80,6 @@ img {
 
 header {
   height: 70vh;
-  // background-color: #b8c6db;
-  // background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
   position: relative;
 }
 
@@ -126,7 +124,6 @@ h2 {
 .colorBox {
   height: 40vh;
   width: 100%;
-  // background: $greyLight;
   background-color: #b8c6db;
   background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 
@@ -142,7 +139,7 @@ h2 {
 
 // DESKTOP
 
-nav {
+.topBar {
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -150,6 +147,16 @@ nav {
   box-shadow: 0 0.75rem 0.75rem 0 rgba(0, 0, 0, 0.5);
   border-radius: 0 0 25px 25px;
   transition: transform 0.4s;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  // background: whitesmoke;
+  // box-shadow: 0 0.75rem 0.75rem 0 rgba(0, 0, 0, 0.5);
+  // border-radius: 0 0 25px 25px;
+  // transition: transform 0.4s;
 
   ul {
     display: flex;
@@ -180,7 +187,7 @@ nav {
   }
 }
 
-.desktopMenu a::before {
+nav a::before {
   content: "";
   position: absolute;
   display: block;
@@ -198,12 +205,45 @@ a:focus::before {
   transform: scaleX(1);
 }
 
-.sidebar {
+.darkInput {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
+  z-index: 30;
 }
 
+
 // MOBILE
+
+nav.mobileOnly,
+button.mobileOnly {
+  display: none;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 0;
+}
+
+.expandedMenu {
+  display: block;
+
+    ul {
+      flex-direction: column;
+    }
+}
+
+.fa-bars,
+.fa-times {
+  color: white;
+  font-size: 1.6rem;
+  z-index: 20;
+}
+
+i.fa-times {
+  display: none;
+}
 
 /* ====================================
         FOOTER
@@ -257,16 +297,14 @@ input[type="checkbox"] {
 
 .darkSwitch {
   position: relative;
-  top: -70px;
-  left: 250px;
-  line-height: 2rem;
+  line-height: 3rem;
   padding-right: 5.5rem;
 }
 
 .darkSwitch::before {
   position: absolute;
   content: "";
-  top: 0;
+  top: 8px;
   right: 0;
   height: 2rem;
   width: 5rem;
@@ -281,8 +319,8 @@ input[type="checkbox"] {
   height: 1.5rem;
   width: 1.5rem;
   background-color: cornflowerblue;
-  top: 0.25rem;
-  right: 3.25rem;
+  top: 12px;
+  right: 66px;
   border-radius: 50%;
 }
 

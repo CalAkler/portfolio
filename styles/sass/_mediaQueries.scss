@@ -1,6 +1,14 @@
-// PROJECTS SECTION
+// @media (max-width: )
+
+
+
 
 @media (max-width: 845px) {
+
+  button.mobileOnly,
+  .mobileMenu {
+    display: block;
+  }
 
   div.projectContainer {
     grid-template-columns: calc(33% - 15px) calc(66% - 15px);

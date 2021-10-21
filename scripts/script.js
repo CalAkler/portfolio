@@ -8,7 +8,7 @@ AOS.init();
 
 
 // HIDDE NAV
-const nav = document.querySelector('.desktopNav');
+const nav = document.querySelector('.topBar');
 let previousScrollPosition = window.pageYOffset;
 
 window.addEventListener('scroll', () => {

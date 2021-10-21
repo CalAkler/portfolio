@@ -295,7 +295,7 @@ i {
 
 .copyright {
   font-size: 0.8rem;
-  color: #b8c6db;
+  color: cornflowerblue;
 }
 
 .tools {
@@ -303,6 +303,11 @@ i {
 }
 
 @media (max-width: 845px) {
+  button.mobileOnly,
+.mobileMenu {
+    display: block;
+  }
+
   div.projectContainer {
     grid-template-columns: calc(33% - 15px) calc(66% - 15px);
     grid-template-rows: 40px 100px 40px 100px 40px 100px 100px 40px;
@@ -339,6 +344,10 @@ i {
 /* ====================================
         PROJECT SECTION
 ================================= */
+.projects {
+  overflow-x: hidden;
+}
+
 .instruction {
   padding-bottom: 30px;
 }
@@ -529,7 +538,7 @@ h3::before {
   height: 2.2rem;
   width: 100%;
   background-color: cornflowerblue;
-  background-image: linear-gradient(315deg, cornflowerblue 0%, #a4bfef 65%, white 100%);
+  background-image: linear-gradient(315deg, cornflowerblue 0%, #a4bfef 55%, #f5f7fa 96%);
   z-index: -10;
   position: absolute;
   bottom: 20px;
@@ -556,7 +565,7 @@ img {
   margin: 0 auto;
 }
 
-.active {
+.home a {
   background: cornflowerblue;
   color: white;
 }
@@ -627,7 +636,7 @@ h2 {
 /* ====================================
         NAVIGATION
 ================================= */
-nav {
+.topBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -643,6 +652,16 @@ nav {
   transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
 }
 nav ul {
   display: -webkit-box;
@@ -671,7 +690,7 @@ nav ul li a {
   border-radius: 0 0 20px 0;
 }
 
-.desktopMenu a::before {
+nav a::before {
   content: "";
   position: absolute;
   display: block;
@@ -694,14 +713,44 @@ a:focus::before {
           transform: scaleX(1);
 }
 
-.sidebar {
+.darkInput {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 30;
+}
+
+nav.mobileOnly,
+button.mobileOnly {
+  display: none;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 0;
+}
+
+.expandedMenu {
+  display: block;
+}
+.expandedMenu ul {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.fa-bars,
+.fa-times {
+  color: white;
+  font-size: 1.6rem;
+  z-index: 20;
+}
+
+i.fa-times {
+  display: none;
 }
 
 /* ====================================
@@ -758,16 +807,14 @@ input[type=checkbox] {
 
 .darkSwitch {
   position: relative;
-  top: -70px;
-  left: 250px;
-  line-height: 2rem;
+  line-height: 3rem;
   padding-right: 5.5rem;
 }
 
 .darkSwitch::before {
   position: absolute;
   content: "";
-  top: 0;
+  top: 8px;
   right: 0;
   height: 2rem;
   width: 5rem;
@@ -782,8 +829,8 @@ input[type=checkbox] {
   height: 1.5rem;
   width: 1.5rem;
   background-color: cornflowerblue;
-  top: 0.25rem;
-  right: 3.25rem;
+  top: 12px;
+  right: 66px;
   border-radius: 50%;
 }
 
