@@ -1,13 +1,36 @@
-// ripple effect when hover/focus/click on project title box (CSS)
-
+// Initialize AOS
 AOS.init();
 
 
 // MOBILE MENU
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobileMenu');
+const closeIcon = document.querySelector('.fa-times');
+const hamIcon = document.querySelector('.fa-bars');
+
+// toggle hamburger button to X button when clicked, and vice versa
+  // when clicked, display mobile nav menu on page
+  
+const toggleMenu = () => {
+  if (mobileMenu.classList.contains('expandedMenu')) {
+    mobileMenu.classList.remove('expandedMenu');
+    mobileMenu.classList.add('mobileOnly');
+    closeIcon.style.display = 'none';
+    hamIcon.style.display = 'block';
+  } else {
+    mobileMenu.classList.add('expandedMenu');
+    mobileMenu.classList.remove('mobileOnly');
+    closeIcon.style.display = 'block';
+    hamIcon.style.display = 'none';
+  }
+}
+
+// Listen for click event on hamburger menu button
+hamburger.addEventListener('click', toggleMenu);
 
 
 
-// HIDDE NAV
+// HIDDEN NAV
 const nav = document.querySelector('.topBar');
 let previousScrollPosition = window.pageYOffset;
 
@@ -21,16 +44,4 @@ window.addEventListener('scroll', () => {
 
   prevScrollPosition = currentScrollPosition;
 });
-
-
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-//   var currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     document.getElementById("navbar").style.top = "0";
-//   } else {
-//     document.getElementById("navbar").style.top = "-50px";
-//   }
-//   prevScrollpos = currentScrollPos;
-// }
 

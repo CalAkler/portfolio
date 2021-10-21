@@ -1,13 +1,15 @@
 // @media (max-width: )
 
 
-
-
 @media (max-width: 845px) {
 
   button.mobileOnly,
   .mobileMenu {
     display: block;
+  }
+
+  .desktopMenu {
+    display: none;
   }
 
   div.projectContainer {

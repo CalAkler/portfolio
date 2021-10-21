@@ -308,6 +308,10 @@ i {
     display: block;
   }
 
+  .desktopMenu {
+    display: none;
+  }
+
   div.projectContainer {
     grid-template-columns: calc(33% - 15px) calc(66% - 15px);
     grid-template-rows: 40px 100px 40px 100px 40px 100px 100px 40px;
@@ -644,6 +648,7 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  overflow-x: hidden;
   background: whitesmoke;
   -webkit-box-shadow: 0 0.75rem 0.75rem 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0.75rem 0.75rem 0 rgba(0, 0, 0, 0.5);
@@ -720,8 +725,7 @@ a:focus::before {
   z-index: 30;
 }
 
-nav.mobileOnly,
-button.mobileOnly {
+.mobileOnly {
   display: none;
 }
 
@@ -734,19 +738,31 @@ button.mobileOnly {
 
 .expandedMenu {
   display: block;
+  position: relative;
 }
 .expandedMenu ul {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background: whitesmoke;
+  -webkit-box-shadow: 0 0.75rem 0.5rem -10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0.75rem 0.5rem -10px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 25px 25px;
+  padding: 60px 40px 20px 10px;
+  position: absolute;
+  top: -100px;
+  right: 0;
 }
 
 .fa-bars,
 .fa-times {
-  color: white;
+  color: black;
   font-size: 1.6rem;
   z-index: 20;
+  position: absolute;
+  top: -60px;
+  right: 30px;
 }
 
 i.fa-times {

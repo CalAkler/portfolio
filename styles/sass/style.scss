@@ -143,6 +143,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   position: relative;
+  overflow-x: hidden;
   background: whitesmoke;
   box-shadow: 0 0.75rem 0.75rem 0 rgba(0, 0, 0, 0.5);
   border-radius: 0 0 25px 25px;
@@ -153,10 +154,6 @@ nav {
   display: flex;
   justify-content: space-between;
   position: relative;
-  // background: whitesmoke;
-  // box-shadow: 0 0.75rem 0.75rem 0 rgba(0, 0, 0, 0.5);
-  // border-radius: 0 0 25px 25px;
-  // transition: transform 0.4s;
 
   ul {
     display: flex;
@@ -214,8 +211,7 @@ a:focus::before {
 
 // MOBILE
 
-nav.mobileOnly,
-button.mobileOnly {
+.mobileOnly {
   display: none;
 }
 
@@ -228,17 +224,29 @@ button.mobileOnly {
 
 .expandedMenu {
   display: block;
+  position: relative;
 
     ul {
       flex-direction: column;
+      // align-items: flex-end;
+      background: whitesmoke;
+      box-shadow: 0 0.75rem 0.5rem -10px rgba(0, 0, 0, 0.5);
+      border-radius: 0 0 25px 25px;
+      padding: 60px 40px 20px 10px;
+      position: absolute;
+      top: -100px;
+      right: 0;      
     }
 }
 
 .fa-bars,
 .fa-times {
-  color: white;
+  color: black;
   font-size: 1.6rem;
   z-index: 20;
+  position: absolute;
+  top: -60px;
+  right: 30px;
 }
 
 i.fa-times {
