@@ -302,7 +302,7 @@ i {
   font-size: 0.8rem;
 }
 
-@media (max-width: 845px) {
+@media (max-width: 930px) {
   button.mobileOnly,
 .mobileMenu {
     display: block;
@@ -312,6 +312,25 @@ i {
     display: none;
   }
 
+  .desktopOnly {
+    display: none;
+  }
+
+  label.darkSwitch {
+    padding-left: 10px;
+    line-height: 1rem;
+  }
+  label.darkSwitch::before {
+    height: 1.8rem;
+    width: 4.5rem;
+    top: -5px;
+  }
+  label.darkSwitch::after {
+    top: -2px;
+    right: 55px;
+  }
+}
+@media (max-width: 845px) {
   div.projectContainer {
     grid-template-columns: calc(33% - 15px) calc(66% - 15px);
     grid-template-rows: 40px 100px 40px 100px 40px 100px 100px 40px;

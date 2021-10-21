@@ -204,10 +204,8 @@ a:focus::before {
 
 .darkInput {
   display: flex;
-  // flex-direction: column;
   z-index: 30;
 }
-
 
 // MOBILE
 
@@ -226,17 +224,16 @@ a:focus::before {
   display: block;
   position: relative;
 
-    ul {
-      flex-direction: column;
-      // align-items: flex-end;
-      background: whitesmoke;
-      box-shadow: 0 0.75rem 0.5rem -10px rgba(0, 0, 0, 0.5);
-      border-radius: 0 0 25px 25px;
-      padding: 60px 40px 20px 10px;
-      position: absolute;
-      top: -100px;
-      right: 0;      
-    }
+  ul {
+    flex-direction: column;
+    background: whitesmoke;
+    box-shadow: 0 0.75rem 0.5rem -10px rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 25px 25px;
+    padding: 60px 40px 20px 10px;
+    position: absolute;
+    top: -100px;
+    right: 0;
+  }
 }
 
 .fa-bars,
@@ -298,7 +295,7 @@ footer {
 }
 
 // DARK SWITCH
-input[type="checkbox"] {
+input[type=checkbox] {
   opacity: 0;
   position: absolute;
 }
@@ -332,10 +329,10 @@ input[type="checkbox"] {
   border-radius: 50%;
 }
 
-input[type="checkbox"]:checked + .darkSwitch::before {
+input[type=checkbox]:checked + .darkSwitch::before {
   background: black;
 }
 
-input[type="checkbox"]:checked + .darkSwitch::after {
+input[type=checkbox]:checked + .darkSwitch::after {
   right: 0.25rem;
 }
