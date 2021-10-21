@@ -707,13 +707,13 @@ h2 {
 }
 
 .headshotBox {
-  width: 30vw;
-  height: 30vh;
+  width: 175px;
+  height: 175px;
   -o-object-fit: cover;
      object-fit: cover;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin-top: -20%;
+  margin: -20% 30px 0 0;
 }
 .headshotBox img {
   border: 10px solid cornflowerblue;
