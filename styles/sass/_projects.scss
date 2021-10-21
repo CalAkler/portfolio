@@ -66,8 +66,8 @@ h5 {
 }
 
 .project {
-  border: 2px solid black;
-  background: $greyLight;
+  border: 8px solid #7C001F;
+  background: lighten($greyLight, 10);
   cursor: pointer;
   text-align: center;
 

@@ -500,8 +500,8 @@ h5 {
 }
 
 .project {
-  border: 2px solid black;
-  background: #b8c6db;
+  border: 8px solid #7C001F;
+  background: #dae1ec;
   cursor: pointer;
   text-align: center;
 }
