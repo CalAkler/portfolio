@@ -373,6 +373,10 @@ i {
   p.tools {
     font-size: 0.7rem;
   }
+
+  .projectInfo .imgBox {
+    display: none;
+  }
 }
 /* ====================================
         ABOUT SECTION
