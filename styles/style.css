@@ -239,7 +239,7 @@ header {
 }
 
 h1 {
-  font-family: "Nunito", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 3.6rem;
   color: black;
 }
@@ -250,13 +250,13 @@ h1 span {
 }
 
 h2 {
-  font-family: "Nunito", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 2.5rem;
   color: #6699CC;
 }
 
 h3, h4, h5 {
-  font-family: "Nunito", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 h3 {
@@ -281,7 +281,7 @@ p {
 }
 
 .home {
-  font-family: "Nunito", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 1.6rem;
 }
 
@@ -515,7 +515,6 @@ h5 {
 
 .proj1 {
   grid-area: proj1;
-  border-radius: 0 20% 20% 20%;
 }
 .proj1 h5 {
   padding: 5px 2px 5px;
@@ -523,17 +522,14 @@ h5 {
 
 .proj2 {
   grid-area: proj2;
-  border-radius: 20% 0 20% 20%;
 }
 
 .proj3 {
   grid-area: proj3;
-  border-radius: 20% 20% 20% 0;
 }
 
 .proj4 {
   grid-area: proj4;
-  border-radius: 20% 20% 0 20%;
 }
 
 .hidden {
