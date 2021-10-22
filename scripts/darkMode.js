@@ -13,6 +13,7 @@ const setDarkMode = () => {
   // set local storage
   localStorage.setItem("dark", darkOn ? "true" : "false");
 
+  // grab all elements to be changed
   const body = document.querySelector('body');
   const header = document.querySelector('header');
   const footer = document.querySelector('footer');
@@ -23,6 +24,7 @@ const setDarkMode = () => {
   const h1Span = document.querySelector('h1 span');
   const colorBox = document.querySelector('.colorBox');
   const h3 = document.querySelectorAll('h3');
+  const h5 = document.querySelectorAll('h5');
   const welcomeBox = document.querySelector('.welcomeBox');
   const welcomeInfo = document.querySelector('.welcomeInfo');
   const proj1Display = document.querySelectorAll('#proj1Display');
@@ -45,16 +47,15 @@ const setDarkMode = () => {
     welcomeBox.classList.add('darkMode');
     welcomeInfo.classList.add('darkMode');
     copyright.classList.add('copyrightDark');
-    // proj1Display.classList.add('darkMode');
-    // proj2Display.classList.add('darkMode');
-    // proj3Display.classList.add('darkMode');
-    // proj4Display.classList.add('darkMode');
 
     for (let i = 0; i < ham.length; i++) {
       ham[i].classList.add('darkHam');
     }
     for (let i = 0; i < h3.length; i++) {
       h3[i].classList.add('darkMode');
+    }
+    for (let i = 0; i < h5.length; i++) {
+      h5[i].classList.add('darkProjTitle');
     }
     for (let i = 0; i < proj1Display.length; i++) {
       proj1Display[i].classList.add('proj1DisplayDark');
@@ -82,16 +83,15 @@ const setDarkMode = () => {
     welcomeBox.classList.remove('darkMode');
     welcomeInfo.classList.remove('darkMode');
     copyright.classList.remove('copyrightDark');
-    // proj1Display.classList.remove('darkMode');
-    // proj2Display.classList.remove('darkMode');
-    // proj3Display.classList.remove('darkMode');
-    // proj4Display.classList.remove('darkMode');
 
     for (let i = 0; i < ham.length; i++) {
       ham[i].classList.remove('darkHam');
     }
     for (let i = 0; i < h3.length; i++) {
       h3[i].classList.remove('darkMode');
+    }
+    for (let i = 0; i < h5.length; i++) {
+      h5[i].classList.remove('darkProjTitle');
     }
     for (let i = 0; i < proj1Display.length; i++) {
       proj1Display[i].classList.remove('proj1DisplayDark');

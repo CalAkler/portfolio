@@ -919,6 +919,10 @@ div.proj4DisplayDark {
   color: whitesmoke;
 }
 
+h5.darkProjTitle {
+  color: black;
+}
+
 footer.footerDark {
   background-color: #000000;
   background-image: linear-gradient(147deg, #2c3e50 0%, #000000 74%);
