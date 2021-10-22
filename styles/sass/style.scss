@@ -1,7 +1,7 @@
 @import "setup";
 @import "vars";
 
-// General styles
+// General
 @import "typography";
 @import "mediaQueries";
 
@@ -39,7 +39,6 @@ h3::before {
   height: 2.2rem;
   width: 100%;
   background-color: cornflowerblue;
-  // transition into background not blending?
   background-image: linear-gradient(315deg, cornflowerblue 0%, #a4bfef 55%, #f5f7fa 96%);
   z-index: -10;
   position: absolute;
@@ -213,43 +212,84 @@ a:focus::before {
   display: none;
 }
 
-.hamburger {
-  background: none;
-  border: none;
-  position: absolute;
-  right: 0;
-}
-
 .expandedMenu {
   display: block;
   position: relative;
 
-  ul {
-    flex-direction: column;
-    background: whitesmoke;
-    box-shadow: 0 0.75rem 0.5rem -10px rgba(0, 0, 0, 0.5);
-    border-radius: 0 0 25px 25px;
-    padding: 60px 40px 20px 10px;
-    position: absolute;
-    top: -100px;
-    right: 0;
-    z-index: 10;
-  }
+    ul {
+      flex-direction: column;
+      background: whitesmoke;
+      box-shadow: 0 0.75rem 0.5rem -10px rgba(0, 0, 0, 0.5);
+      border-radius: 0 0 25px 25px;
+      padding: 60px 40px 20px 10px;
+      position: absolute;
+      top: -100px;
+      right: 0;
+      z-index: 10;
+    }
 }
 
-.fa-bars,
-.fa-times {
-  color: black;
-  font-size: 1.6rem;
-  z-index: 20;
+
+//NAV ANIMATION
+
+.navIcon {
+  width: 40px;
+  height: 45px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
   position: absolute;
-  top: -60px;
+  z-index: 20;
+  top: 13px;
   right: 30px;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+
+    span {
+      display: block;
+      position: absolute;
+      height: 6px;
+      width: 100%;
+      background: black;
+      border-radius: 9px;
+      opacity: 1;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+
+        &:nth-child(1) {
+          top: 0px;
+          transform-origin: left center;
+        }
+        
+        &:nth-child(2) {
+          top: 18px;
+          transform-origin: left center;
+        }
+        
+        &:nth-child(3) {
+          top: 36px;
+          transform-origin: left center;
+        }
+    }
 }
 
-i.fa-times {
-  display: none;
+.navIcon.open span:nth-child(1) {
+  transform: rotate(48deg);
+  top: -3px;
+  left: 8px;
 }
+
+.navIcon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.navIcon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 27px;
+  left: 8px;
+}
+
 
 /* ====================================
         FOOTER
@@ -285,6 +325,7 @@ footer {
   background: $greyDark;
 }
 
+
 /* ====================================
         DARK MODE STYLES
 ================================= */
@@ -296,7 +337,7 @@ footer {
 }
 
 // DARK SWITCH
-input[type=checkbox] {
+input[type="checkbox"] {
   opacity: 0;
   position: absolute;
 }
@@ -330,10 +371,10 @@ input[type=checkbox] {
   border-radius: 50%;
 }
 
-input[type=checkbox]:checked + .darkSwitch::before {
+input[type="checkbox"]:checked + .darkSwitch::before {
   background: black;
 }
 
-input[type=checkbox]:checked + .darkSwitch::after {
+input[type="checkbox"]:checked + .darkSwitch::after {
   right: 0.25rem;
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,12 +12,10 @@
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="icon" href="./assets/favicon.ico">
 </head>
-
 <body>
   <header>
     <div class="topBar">
       <p class="home"><a href="./index.html">Cal Akler</a></p>
-
       <div class="darkInput">
         <input type="checkbox" id="darkButton">
         <label for="darkButton" class="darkSwitch desktopOnly">Dark Mode</label>
@@ -33,13 +30,10 @@
       </nav>
     </div>
 
-    <!--  hamburger -->
-
-    <button class="hamburger mobileOnly">
-      <div>
-        <i class="fas fa-bars"></i>
-      </div>
-        <i class="fas fa-times"></i>
+    <button class="navIcon mobileOnly">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
     <nav class="mobileMenu mobileOnly">
@@ -56,9 +50,6 @@
         </li>
       </ul>
     </nav>
-
-
-
 
     <div class="title">
       <h1 data-aos="fade-right" data-aos-delay="100" data-aos-duration="800"><span>Hi, </span>I'm Cal Akler</h1>
@@ -88,19 +79,13 @@
           </div>
         </div>
       </div>
-
     </section>
-
-
 
     <section class="projects" id="projects">
       <div class="wrapper">
-
         <h3>Projects</h3>
         <p class="instruction">Select a project to view it on the screen!</p>
-
         <div class="projectContainer">
-
           <div class="projectInfo screen1">
 
             <div id="proj1Display" class="hidden">
@@ -144,7 +129,6 @@
           </div>
 
           <div class="projectInfo screen2">
-
             <div id="proj1Display" class="hidden">
               <h4>What Do You No?</h4>
               <p class="tools">React | Firebase | REST API | CSS3</p>
@@ -233,13 +217,10 @@
                 repo</a>
             </div>
           </div>
-
         </div>
       </div>
-
     </section>
   </main>
-
 
   <footer id="contact">
     <p>Get in touch!</p>
@@ -269,7 +250,6 @@
         </a>
       </li>
     </ul>
-
     <p class="copyright">Designed and developed by Cal Akler, 2021.</p>
   </footer>
 
@@ -279,5 +259,4 @@
   <script src="./scripts/darkMode.js"></script>
   <script src="./scripts/projectInfo.js"></script>
 </body>
-
 </html>

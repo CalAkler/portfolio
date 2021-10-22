@@ -3,30 +3,27 @@ AOS.init();
 
 
 // MOBILE MENU
-const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.mobileMenu');
-const closeIcon = document.querySelector('.fa-times');
-const hamIcon = document.querySelector('.fa-bars');
-
-// toggle hamburger button to X button when clicked, and vice versa
+  // toggle hamburger button to X button when clicked, and vice versa
   // when clicked, display mobile nav menu on page
+
+const mobileMenu = document.querySelector('.mobileMenu');
+const navIcon = document.querySelector('.navIcon');
   
 const toggleMenu = () => {
   if (mobileMenu.classList.contains('expandedMenu')) {
     mobileMenu.classList.remove('expandedMenu');
     mobileMenu.classList.add('mobileOnly');
-    closeIcon.style.display = 'none';
-    hamIcon.style.display = 'block';
   } else {
     mobileMenu.classList.add('expandedMenu');
     mobileMenu.classList.remove('mobileOnly');
-    closeIcon.style.display = 'block';
-    hamIcon.style.display = 'none';
   }
 }
 
-// Listen for click event on hamburger menu button
-hamburger.addEventListener('click', toggleMenu);
+navIcon.addEventListener('click', () => {
+  navIcon.classList.toggle('open');
+  toggleMenu();
+});
+
 
 
 
