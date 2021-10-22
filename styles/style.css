@@ -509,6 +509,8 @@ h5 {
   width: 100px;
   height: 60px;
   margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .proj1 {
@@ -906,9 +908,29 @@ footer ul li:hover i, footer ul li:focus-within i {
 /* ====================================
         DARK MODE STYLES
 ================================= */
-.darkMode {
+.darkMode,
+ul.darkMobileNav,
+div.proj1DisplayDark,
+div.proj2DisplayDark,
+div.proj3DisplayDark,
+div.proj4DisplayDark {
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  color: whitesmoke;
+}
+
+footer.footerDark {
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #2c3e50 0%, #000000 74%);
+  color: whitesmoke;
+}
+
+p.copyrightDark {
   background: black;
-  color: white;
+}
+
+span.darkHam {
+  background: whitesmoke;
 }
 
 input[type=checkbox] {
