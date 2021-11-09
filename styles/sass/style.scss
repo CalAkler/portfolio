@@ -89,11 +89,12 @@ h1 {
 
 h1 span {
   display: block;
-  padding-bottom: 15px;
+  padding: 15px 0;
 }
 
 h2 {
   text-align: center;
+  padding: 20px 0;
 }
 
 h1,
@@ -115,7 +116,7 @@ h2 {
 }
 
 .title {
-  padding-top: 30px;
+  padding-top: 55px;
   display: flex;
   flex-direction: column;
 }
